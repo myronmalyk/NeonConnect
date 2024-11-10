@@ -1,0 +1,136 @@
+/* Estilos base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background: rgba(255, 255, 255, 0.1); /* Fondo ligeramente translúcido */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título */
+h2 {
+    font-size: 32px;
+    color: #66a3ff; /* Azul suave */
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo de los campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Campos de entrada */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333;
+    background: transparent;
+    color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efectos de enfoque en los campos */
+input:focus, textarea:focus {
+    border-color: #66a3ff; /* Azul suave */
+    box-shadow: 0 0 10px rgba(102, 163, 255, 0.6);
+}
+
+/* Animación del botón */
+button {
+    background-color: #4e72b8; /* Azul medio */
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3d61a5; /* Azul oscuro */
+    transform: scale(1.05);
+}
+
+/* Respuesta del formulario */
+#form-response {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #66a3ff; /* Azul suave */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Estilo de fondo animado */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(102, 163, 255, 0.2); /* Azul claro */
+    transform: translate(-50%, -50%);
+    animation: rotateBG 6s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes rotateBG {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
